@@ -1,0 +1,124 @@
+// These mixins should be hidden
+@mixin zero-padding-margin($font) {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: 1rem $font, sans-serif;
+}
+
+@mixin header-footer {
+  font-size: 3rem;
+  padding: min(0.3125em, 5px);
+  width: 100%;
+  border: 1px solid #ffffff;
+  @include flex(column, center);
+
+  @media (max-width: 700px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
+}
+
+// These mixins should be public
+@mixin page-reset($font) {
+  :root {
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+
+    @media (prefers-reduced-motion) {
+      scroll-behavior: auto;
+    }
+  }
+
+  :not(html, head, body, style, script, ul, ol, li, svg, path) {
+    display: flow-root;
+  }
+
+  * {
+    @include zero-padding-margin($font);
+
+    &::after, &::before {
+      @include zero-padding-margin($font);
+    }
+  }
+
+  a {
+    color: #ffffff;
+    //text-decoration: none;
+
+    &:is(:active, :focus) {
+      color: #ffffff;
+      //text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline dotted;
+    }
+  }
+}
+
+@mixin header {
+  header {
+    @include header-footer();
+  }
+}
+
+@mixin nav {
+  nav {
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    @include flex(column, center);
+    font-size: 2rem;
+    width: 100%;
+    padding: 0.3125em;
+    margin-top: 0;
+    margin-bottom: auto;
+
+    @media (max-width: 700px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+
+    ul {
+      width: 100%;
+      list-style: none;
+      @include flex(row, space-around);
+      font-size: inherit;
+
+      li {
+        font-size: inherit;
+
+        a {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+}
+
+@mixin footer {
+  footer {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    @include header-footer();
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+}
+
+@mixin flex($direction: column, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

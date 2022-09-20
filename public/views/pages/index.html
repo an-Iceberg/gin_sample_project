@@ -1,0 +1,30 @@
+{{define "home"}}
+
+{{template "pageHead" .}}
+
+{{template "header" .}}
+{{template "nav" .}}
+
+<main class="main">
+
+<h1>{{.title}}</h1>
+
+<div class="intro-section">
+  <p>{{.subTitle}}</p>
+  <img src="images/gin.png" alt="GO gin framework logo" width="100">
+</div>
+
+<div class="alpine-example" x-data="{ open : false }">
+  <button x-text="open ? 'Close' : 'Open'" x-on:pointerdown="open = !open"></button>
+  <div class="text" x-show="open">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae minima consequuntur hic quia eaque, consectetur optio impedit, laboriosam nemo animi accusantium sit ipsum! Quasi, sunt voluptates ullam, dolor perferendis molestias qui neque eum mollitia natus optio aut pariatur fuga. Pariatur ducimus magnam, dignissimos dolor error ex totam non expedita nihil dicta maiores impedit libero iure praesentium accusamus iusto hic placeat repellendus aliquam voluptates ipsum iste? Laboriosam necessitatibus quisquam culpa inventore illo dicta libero repellendus eligendi. Dolores commodi ullam ab eaque corporis numquam nam aperiam voluptatem sit cum ex officia fugit eos, delectus in quod tempore dignissimos vitae cupiditate placeat excepturi natus earum rerum at? Error saepe explicabo a reprehenderit corporis molestias, pariatur architecto, libero rem eos, ab ipsum illum sunt maiores dolores. Aut neque eligendi, minima quibusdam voluptatibus rem porro voluptates minus exercitationem cumque alias consequuntur libero quos earum voluptas totam eos aliquid perspiciatis! Dicta vel aperiam facere veritatis nobis quaerat cumque pariatur minima voluptatum quisquam sequi aut, sint voluptate nostrum eum. Pariatur eveniet minus provident consequatur veniam voluptatem et quia! Sint corrupti, natus beatae molestiae eveniet voluptatem doloribus optio quisquam, aut aliquam delectus? Dolorum quos delectus temporibus doloribus esse possimus laudantium autem, consequuntur facere nulla velit, reprehenderit sapiente? Libero.
+  </div>
+</div>
+
+</main>
+
+{{template "footer" .}}
+
+{{template "pageEnd" .}}
+
+{{end}}

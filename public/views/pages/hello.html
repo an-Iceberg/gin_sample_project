@@ -1,0 +1,20 @@
+{{define "hello"}}
+
+{{template "pageHead" .}}
+
+{{template "header" .}}
+{{template "nav" .}}
+
+<main class="main">
+
+<h1>{{.title}}</h1>
+
+<p>{{.text}}</p>
+
+</main>
+
+{{template "footer" .}}
+
+{{template "pageEnd" .}}
+
+{{end}}

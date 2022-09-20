@@ -1,0 +1,41 @@
+@use "_mixins";
+
+@font-face {
+  font-family: "Chewie";
+  src: url("../fonts/ChewieDEMO-Regular.otf" ) format("opentype");
+}
+
+@include mixins.page-reset("Chewie");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  background-color: #000000;
+  overflow: auto;
+  @include mixins.flex();
+
+  @include mixins.header;
+  @include mixins.nav;
+
+  main {
+    margin: 5px 0;
+    @include mixins.flex();
+    max-width: min(95%, 1280px);
+
+    div.intro-section {
+      @include mixins.flex(row);
+    }
+
+    .alpine-example {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include mixins.flex(column, center);
+      text-align: justify;
+    }
+  }
+
+  @include mixins.footer;
+}
