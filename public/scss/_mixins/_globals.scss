@@ -1,4 +1,6 @@
 // These mixins should be hidden
+$border-color: #8000ff;
+
 @mixin zero-padding-margin($font) {
   padding: 0;
   margin: 0;
@@ -6,11 +8,16 @@
   font: 1rem $font, sans-serif;
 }
 
+@mixin inset-shadow {
+  box-shadow: inset 0px 0px 15px 5px $border-color;
+}
+
 @mixin header-footer {
   font-size: 3rem;
   padding: min(0.3125em, 5px);
   width: 100%;
-  border: 1px solid #ffffff;
+  border: var(--border-thickness) solid $border-color;
+  @include inset-shadow();
   @include flex(column, center);
 
   @media (max-width: 700px) {
@@ -28,6 +35,16 @@
     scroll-behavior: smooth;
     width: 100vw;
     height: 100vh;
+
+    --border-thickness: 4px;
+
+    @media (max-width: 700px) {
+      --border-thickness: 3px;
+    }
+
+    @media (max-width: 500px) {
+      --border-thickness: 2px;
+    }
 
     @media (prefers-reduced-motion) {
       scroll-behavior: auto;
@@ -48,11 +65,9 @@
 
   a {
     color: #ffffff;
-    //text-decoration: none;
 
     &:is(:active, :focus) {
       color: #ffffff;
-      //text-decoration: none;
     }
 
     &:hover {
@@ -67,13 +82,15 @@
   }
 }
 
+// TODO: consider implementing this as a mobile friendly blend-in menu on the top right
 @mixin nav {
   nav {
-    border-left: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    border-right: 1px solid #ffffff;
+    border-left: var(--border-thickness) solid $border-color;
+    border-bottom: var(--border-thickness) solid $border-color;
+    border-right: var(--border-thickness) solid $border-color;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    @include inset-shadow();
     @include flex(column, center);
     font-size: 2rem;
     width: 100%;
