@@ -1,4 +1,4 @@
-module gin
+module gin_sample_project
 
 go 1.19
 
