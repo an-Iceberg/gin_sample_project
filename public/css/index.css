@@ -42,10 +42,10 @@
 }
 
 a {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 a:is(:active, :focus) {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 a:hover {
   text-decoration: underline dotted;
@@ -54,8 +54,8 @@ a:hover {
 body {
   width: 100vw;
   height: 100vh;
-  color: #ffffff;
-  background-color: #000222;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 2, 34);
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -66,8 +66,8 @@ body header {
   font-size: 3rem;
   padding: min(0.3125em, 5px);
   width: 100%;
-  border: var(--border-thickness) solid #8000ff;
-  box-shadow: inset 0px 0px 15px 5px #8000ff;
+  border: var(--border-thickness) solid rgb(128, 0, 255);
+  box-shadow: inset 0px 0px 15px 5px rgb(128, 0, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,12 +84,12 @@ body header {
   }
 }
 body nav {
-  border-left: var(--border-thickness) solid #8000ff;
-  border-bottom: var(--border-thickness) solid #8000ff;
-  border-right: var(--border-thickness) solid #8000ff;
+  border-left: var(--border-thickness) solid rgb(128, 0, 255);
+  border-bottom: var(--border-thickness) solid rgb(128, 0, 255);
+  border-right: var(--border-thickness) solid rgb(128, 0, 255);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  box-shadow: inset 0px 0px 15px 5px #8000ff;
+  box-shadow: inset 0px 0px 15px 5px rgb(128, 0, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,8 +156,8 @@ body footer {
   font-size: 3rem;
   padding: min(0.3125em, 5px);
   width: 100%;
-  border: var(--border-thickness) solid #8000ff;
-  box-shadow: inset 0px 0px 15px 5px #8000ff;
+  border: var(--border-thickness) solid rgb(128, 0, 255);
+  box-shadow: inset 0px 0px 15px 5px rgb(128, 0, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;

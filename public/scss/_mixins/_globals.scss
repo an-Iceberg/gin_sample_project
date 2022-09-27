@@ -1,5 +1,5 @@
 // These mixins should be hidden
-$border-color: #8000ff;
+$border-color: rgb(50%, 0%, 100%);
 
 @mixin zero-padding-margin($font) {
   padding: 0;
@@ -64,10 +64,10 @@ $border-color: #8000ff;
   }
 
   a {
-    color: #ffffff;
+    color: rgb(100%, 100%, 100%);
 
     &:is(:active, :focus) {
-      color: #ffffff;
+      color: rgb(100%, 100%, 100%);
     }
 
     &:hover {
