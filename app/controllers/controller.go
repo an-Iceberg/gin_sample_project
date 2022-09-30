@@ -23,3 +23,11 @@ func HelloHandler(context *gin.Context) {
 		"text":      "Hello World, how are you doing tonight?",
 	})
 }
+
+func SomethingHandler(context *gin.Context) {
+	context.HTML(http.StatusOK, "something", gin.H{
+		"css":       "something",
+		"pageTitle": "Something",
+		"title":     "Something",
+	})
+}

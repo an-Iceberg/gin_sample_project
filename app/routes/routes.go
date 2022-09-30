@@ -9,4 +9,6 @@ import (
 func RegisterAppRoutes(router *gin.Engine) {
 	router.GET("/", controllers.HomeHandler)
 	router.GET("/hello", controllers.HelloHandler)
+
+	router.GET("/something", controllers.SomethingHandler)
 }
