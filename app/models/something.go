@@ -6,6 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
+/* TODO: replace all "something"s with an actual object as an example */
 type Something struct {
 	gorm.Model
 	Number  int    `gorm:"" json:"number"`

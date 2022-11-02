@@ -31,3 +31,10 @@ func SomethingHandler(context *gin.Context) {
 		"title":     "Something",
 	})
 }
+
+func NestedTemplateHandler(context *gin.Context) {
+	context.HTML(http.StatusOK, "nestedTemplate", gin.H{
+		"css":       "nested-template",
+		"pageTitle": "Nested Templates",
+	})
+}

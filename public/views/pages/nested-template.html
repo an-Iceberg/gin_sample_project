@@ -1,0 +1,20 @@
+{{define "nestedTemplate"}}
+
+{{template "pageHead" .}}
+
+{{template "header" .}}
+{{template "nav" .}}
+
+<main class="main">
+
+<div> {{template "one"}} </div>
+<div> {{template "two"}} </div>
+<div> {{template "three"}} </div>
+
+</main>
+
+{{template "footer" .}}
+
+{{template "pageEnd" .}}
+
+{{end}}

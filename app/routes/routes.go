@@ -11,4 +11,6 @@ func RegisterAppRoutes(router *gin.Engine) {
 	router.GET("/hello", controllers.HelloHandler)
 
 	router.GET("/something", controllers.SomethingHandler)
+
+	router.GET("/nested-template", controllers.NestedTemplateHandler)
 }

@@ -13,3 +13,30 @@
 </head>
 <body>
 {{end}}
+
+{{define "header"}}
+<header>Header</header>
+{{end}}
+
+{{define "nav"}}
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+
+    <li><a href="/hello">Hello</a></li>
+
+    <li><a href="/something">Something</a></li>
+
+    <li><a href="/nested-template">Nested Template</a></li>
+  </ul>
+</nav>
+{{end}}
+
+{{define "footer"}}
+<footer>Footer</footer>
+{{end}}
+
+{{define "pageEnd"}}
+</body>
+</html>
+{{end}}

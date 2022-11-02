@@ -10,7 +10,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  color: rgb(100%, 100%, 100%);
+  color: #fff;
   background-color: rgb(0%, 0.78%, 13.33%);
   overflow: auto;
   @include mixins.flex();

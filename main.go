@@ -8,7 +8,9 @@ import (
 
 func main() {
 	router := gin.Default()
+
 	router.LoadHTMLGlob("public/views/**/*.html")
+
 	router.Static("/css", "./public/css")
 	router.Static("/js", "./public/js")
 	router.Static("/fonts", "./public/fonts")

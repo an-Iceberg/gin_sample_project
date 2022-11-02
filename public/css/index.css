@@ -24,10 +24,11 @@
   }
 }
 
+/*
 :not(html, head, body, style, script, ul, ol, li, svg, path) {
   display: flow-root;
 }
-
+*/
 * {
   padding: 0;
   margin: 0;
@@ -42,10 +43,10 @@
 }
 
 a {
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 a:is(:active, :focus) {
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 a:hover {
   text-decoration: underline dotted;
@@ -59,8 +60,10 @@ body {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
 }
 body header {
   font-size: 3rem;
@@ -72,6 +75,8 @@ body header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
 }
 @media (max-width: 700px) {
   body header {
@@ -94,6 +99,8 @@ body nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
   font-size: 2rem;
   width: 100%;
   padding: 0.3125em;
@@ -117,6 +124,8 @@ body nav ul {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
   font-size: inherit;
 }
 body nav ul li {
@@ -129,15 +138,19 @@ body main {
   margin: 5px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
   max-width: min(95%, 1280px);
 }
 body main div.intro-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
 }
 body main .alpine-example {
   display: flex;
@@ -148,6 +161,8 @@ body main .alpine-example {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
   text-align: justify;
 }
 body footer {
@@ -162,6 +177,8 @@ body footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
   margin-top: auto;
   margin-bottom: 0;
 }

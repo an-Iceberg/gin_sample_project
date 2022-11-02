@@ -20,11 +20,14 @@ body {
 
   main {
     margin: 5px 0;
-    @include mixins.flex();
-    max-width: min(95%, 1280px);
+    @include mixins.flex($gap: 20px);
 
-    .title {
-      font-size: 2rem;
+    div {
+      width: 100%;
+
+      h1 {
+        font-size: 1.75rem;
+      }
     }
   }
 

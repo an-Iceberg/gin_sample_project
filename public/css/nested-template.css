@@ -140,8 +140,14 @@ body main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0px;
+  gap: 20px;
   flex-wrap: nowrap;
+}
+body main div {
+  width: 100%;
+}
+body main div h1 {
+  font-size: 1.75rem;
 }
 body footer {
   border-top-right-radius: 20px;
@@ -171,4 +177,4 @@ body footer {
   }
 }
 
-/*# sourceMappingURL=hello.css.map */
+/*# sourceMappingURL=nested-template.css.map */

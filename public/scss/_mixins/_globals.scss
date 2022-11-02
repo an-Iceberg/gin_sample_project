@@ -51,9 +51,11 @@ $border-color: rgb(50%, 0%, 100%);
     }
   }
 
+  /*
   :not(html, head, body, style, script, ul, ol, li, svg, path) {
     display: flow-root;
   }
+  */
 
   * {
     @include zero-padding-margin($font);
@@ -64,10 +66,10 @@ $border-color: rgb(50%, 0%, 100%);
   }
 
   a {
-    color: rgb(100%, 100%, 100%);
+    color: #fff;
 
     &:is(:active, :focus) {
-      color: rgb(100%, 100%, 100%);
+      color: #fff;
     }
 
     &:hover {
@@ -133,9 +135,11 @@ $border-color: rgb(50%, 0%, 100%);
   }
 }
 
-@mixin flex($direction: column, $justify: space-between, $align: center) {
+@mixin flex($direction: column, $content: center, $align: center, $gap: 0px, $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
-  justify-content: $justify;
+  justify-content: $content;
   align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
 }
